@@ -1,0 +1,74 @@
+"use client";
+
+import { Box, Typography, Link as MuiLink } from "@mui/material";
+import Image from "next/image";
+import AppContainer from "@/components/AppContainer";
+
+export default function Footer() {
+  return (
+    <Box component="footer" sx={{ py: 5 }}>
+      <AppContainer>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Image
+            src="/static/logo-header.svg"
+            alt="Zapomni"
+            width={160}
+            height={70}
+          />
+          <Box sx={{ mt: 4, textAlign: "center" }}>
+            <Typography
+              sx={{ fontSize: 24, fontWeight: 500, color: "#121212" }}
+            >
+              ООО «Запомни Системс»
+            </Typography>
+            <Typography sx={{ mt: 2, fontSize: 20, color: "#121212" }}>
+              ИНН 7708412621
+            </Typography>
+            <Box
+              sx={{
+                mt: 8,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 1.5,
+              }}
+            >
+              <Image src="/icon-phone.svg" alt="phone" width={24} height={24} />
+              <MuiLink
+                href="tel:+74951204264"
+                underline="hover"
+                sx={{ fontSize: 24, color: "#121212" }}
+              >
+                +7 495 120 42 64
+              </MuiLink>
+            </Box>
+            <Box
+              sx={{
+                mt: 2,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 1.5,
+              }}
+            >
+              <Image src="/icon-email.svg" alt="email" width={24} height={24} />
+              <MuiLink
+                href="mailto:info@zapomni.ru"
+                underline="hover"
+                sx={{ fontSize: 24, color: "#121212" }}
+              >
+                info@zapomni.ru
+              </MuiLink>
+            </Box>
+          </Box>
+        </Box>
+      </AppContainer>
+    </Box>
+  );
+}
