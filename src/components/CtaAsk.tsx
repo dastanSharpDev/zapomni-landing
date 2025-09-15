@@ -6,10 +6,12 @@ import AppContainer from "@/components/AppContainer";
 export default function CtaAsk() {
   return (
     <Box
+      id="contacts"
       sx={{
         py: 5,
         borderTop: "1px solid #121212",
         borderBottom: "1px solid #121212",
+        scrollMarginTop: 100,
       }}
     >
       <AppContainer>

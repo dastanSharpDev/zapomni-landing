@@ -5,7 +5,6 @@ import Image from "next/image";
 import AppContainer from "@/components/AppContainer";
 import FeatureSlider, { FeatureSlide } from "@/components/FeatureSlider";
 
-
 function Feature({ icon, text }: { icon: string; text: string }) {
   return (
     <Box
@@ -92,7 +91,7 @@ export default function CashierAutomation() {
             </Typography>
           </Box>
 
-          <section>
+          <section id="general" style={{ scrollMarginTop: 100 }}>
             <div
               style={{ maxWidth: 1440, margin: "0 auto", padding: "0 16px" }}
             >
@@ -115,7 +114,7 @@ export default function CashierAutomation() {
             </div>
           </section>
 
-          <section>
+          <section id="features" style={{ scrollMarginTop: 100 }}>
             <div
               style={{ maxWidth: 1440, margin: "0 auto", padding: "0 16px" }}
             >
@@ -151,7 +150,7 @@ export default function CashierAutomation() {
             </div>
           </section>
 
-          <section>
+          <section id="sales" style={{ scrollMarginTop: 100 }}>
             <div
               style={{ maxWidth: 1440, margin: "0 auto", padding: "0 16px" }}
             >
@@ -190,8 +189,7 @@ export default function CashierAutomation() {
             </div>
           </section>
 
-
-          <section>
+          <section id="advanced" style={{ scrollMarginTop: 100 }}>
             <div
               style={{ maxWidth: 1440, margin: "0 auto", padding: "0 16px" }}
             >
@@ -227,7 +225,7 @@ export default function CashierAutomation() {
             </div>
           </section>
 
-          <Box>
+          <Box id="pos-automation" sx={{ scrollMarginTop: 100 }}>
             <Box
               sx={{
                 display: "flex",
