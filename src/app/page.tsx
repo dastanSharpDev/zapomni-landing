@@ -3,7 +3,6 @@ import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
 import CtaAsk from "@/components/CtaAsk";
 import CashierAutomation from "@/components/CashierAutomation";
-import FeatureSlider, { FeatureSlide } from "@/components/FeatureSlider";
 
 export default function Home() {
   return (
@@ -11,7 +10,7 @@ export default function Home() {
       <Hero />
       <Partners />
       <CashierAutomation />
-      
+
       <CtaAsk />
       <Footer />
     </main>

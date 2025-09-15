@@ -5,6 +5,7 @@ import { Box, Typography, IconButton } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -25,27 +26,29 @@ export default function FeatureSlider({
   items,
   reverse = false,
 }: FeatureSliderProps) {
-  if (!items || items.length === 0) return null;
   const gridColumns = useMemo(
     () => ({ xs: "1fr", md: reverse ? "60% 40%" : "40% 60%" }),
     [reverse]
   );
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
+
+  const slides = items ?? [];
+  if (slides.length === 0) return null;
 
   return (
     <Swiper
       modules={[Navigation, Autoplay]}
       navigation={false}
-      //   autoplay={{
-      //     delay: 4000,
-      //     disableOnInteraction: false,
-      //     pauseOnMouseEnter: true,
-      //   }}
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      }}
       slidesPerView={1}
       style={{ width: "100%" }}
       onSwiper={(s) => (swiperRef.current = s)}
     >
-      {items.map((item, i) => (
+      {slides.map((item, i) => (
         <SwiperSlide key={i}>
           <Box
             sx={{
