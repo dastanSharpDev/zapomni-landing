@@ -21,10 +21,11 @@ import { useState } from "react";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const navItems = [
-    { label: "Общие функции системы", href: "#general" },
-    { label: "Особенности системы", href: "#features" },
-    { label: "Продажная часть", href: "#sales" },
-    { label: "Расширенный функционал", href: "#advanced" },
+    { label: "Администрирование мероприятий", href: "#general" },
+    { label: "Электронные продажи", href: "#sales" },
+    { label: "Дополнительные услуги", href: "#advanced" },
+    { label: "Отчеты и статистика", href: "#features" },
+    { label: "Кастомизированный сервис продаж", href: "#five-block" },
     { label: "Автоматизация кассового блока", href: "#pos-automation" },
     { label: "Контакты", href: "#contacts" },
   ];
@@ -71,11 +72,15 @@ export default function Header() {
                 color="inherit"
                 sx={{
                   textTransform: "none",
-                  fontWeight: 500,
+                  fontWeight: 400,
                   fontSize: 16,
-                  letterSpacing: 0.2,
+                  lineHeight: "normal",
+                  letterSpacing: 0,
                   px: 0,
                   minWidth: 0,
+                  maxWidth: 220,
+                  whiteSpace: "normal",
+                  textAlign: "center",
                 }}
               >
                 {item.label}
@@ -98,7 +103,19 @@ export default function Header() {
           <List>
             {navItems.map((item) => (
               <ListItemButton key={item.href} component={Link} href={item.href}>
-                <ListItemText primary={item.label} />
+                <ListItemText
+                  primary={item.label}
+                  primaryTypographyProps={{
+                    sx: {
+                      whiteSpace: "normal",
+                      fontWeight: 400,
+                      fontSize: 16,
+                      lineHeight: "normal",
+                      letterSpacing: 0,
+                      textAlign: "center",
+                    },
+                  }}
+                />
               </ListItemButton>
             ))}
           </List>

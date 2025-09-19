@@ -18,16 +18,18 @@ export type FeatureSlide = {
 type FeatureSliderProps = {
   items: FeatureSlide[];
   reverse?: boolean;
+  imageOnly?: boolean;
 };
 
 export default function FeatureSlider({
   items,
   reverse = false,
+  imageOnly = false,
 }: FeatureSliderProps) {
-  const gridColumns = useMemo(
-    () => ({ xs: "1fr", md: reverse ? "60% 40%" : "40% 60%" }),
-    [reverse]
-  );
+  const gridColumns = useMemo(() => {
+    if (imageOnly) return { xs: "1fr", md: "1fr" } as const;
+    return { xs: "1fr", md: reverse ? "60% 40%" : "40% 60%" } as const;
+  }, [reverse, imageOnly]);
   const swiperRef = useRef<SwiperType | null>(null);
 
   const slides = items ?? [];
@@ -79,30 +81,32 @@ export default function FeatureSlider({
                 position: "relative",
                 display: "grid",
                 gridTemplateColumns: gridColumns,
-                alignItems: "center",
+                // alignItems: "center",
               }}
             >
-              <Box
-                sx={{
-                  order: { xs: 2, md: reverse ? 2 : 1 },
-                  maxWidth: "100%",
-                }}
-              >
-                <Typography
+              {!imageOnly && (
+                <Box
                   sx={{
-                    fontSize: { xs: 28, md: 52 },
-                    fontWeight: 800,
-                    lineHeight: { xs: 1.1, md: 1.08 },
-                    color: "#121212",
-                    overflowWrap: "anywhere",
+                    order: { xs: 2, md: reverse ? 2 : 1 },
+                    maxWidth: "100%",
                   }}
                 >
-                  {item.text}
-                </Typography>
-              </Box>
+                  <Typography
+                    sx={{
+                      fontSize: { xs: 28, md: 52 },
+                      fontWeight: 800,
+                      lineHeight: { xs: 1.1, md: 1.08 },
+                      color: "#121212",
+                      overflowWrap: "anywhere",
+                    }}
+                  >
+                    {item.text}
+                  </Typography>
+                </Box>
+              )}
               <Box
                 sx={{
-                  order: { xs: 1, md: reverse ? 1 : 2 },
+                  order: { xs: 1, md: imageOnly ? 1 : reverse ? 1 : 2 },
                   position: "relative",
                   width: "100%",
                   height: { xs: 280, md: 420 },

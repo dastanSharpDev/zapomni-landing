@@ -6,7 +6,7 @@ import AppContainer from "@/components/AppContainer";
 
 export default function Footer() {
   return (
-    <Box component="footer" sx={{ py: 5 }}>
+    <Box component="footer" sx={{ py: 5, borderTop: "1px solid #121212" }}>
       <AppContainer>
         <Box
           sx={{
@@ -15,6 +15,12 @@ export default function Footer() {
             alignItems: "center",
           }}
         >
+          <Typography sx={{ fontSize: 32, fontWeight: 600, mb: 2, textAlign: "center" }}>
+            Не нашли интересующую услугу?
+          </Typography>
+          <Typography sx={{ fontSize: 24, fontWeight: 400, mb: 3, textAlign: "center" }}>
+            Напишите нам на почту запрос
+          </Typography>
           <Image
             src="/static/logo-header.svg"
             alt="Zapomni"

@@ -15,6 +15,7 @@ const partnerLogosRow1 = [
   "7.png",
 ];
 const partnerLogosRow2 = ["8.png", "9.png", "10.png", "11.png", "12.png"];
+const partnerLogosRow3 = ["13.png", "14.png", "15.png", "16.png"];
 
 const scrollLeft = keyframes`
   0% { transform: translateX(0); }
@@ -164,6 +165,7 @@ export default function Partners() {
         >
           <LogosRow files={partnerLogosRow1} mdCols={7} />
           <LogosRow files={partnerLogosRow2} mdCols={5} reverse />
+          <LogosRow files={partnerLogosRow3} mdCols={4} />
         </Box>
       </AppContainer>
     </Box>
