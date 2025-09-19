@@ -274,27 +274,27 @@ export default function CashierAutomation() {
                     imageSrc: "/images/special-block/fifth-block/1.png",
                   } as FeatureSlide,
                   {
-                    text: "",
+                    text: "Кастомизация виджета продаж, билетов и писем под партнера",
                     imageSrc: "/images/special-block/fifth-block/2.png",
                   } as FeatureSlide,
                   {
-                    text: "",
+                    text: "Кастомизация виджета продаж, билетов и писем под партнера",
                     imageSrc: "/images/special-block/fifth-block/3.png",
                   } as FeatureSlide,
                   {
-                    text: "",
+                    text: "Кастомизация виджета продаж, билетов и писем под партнера",
                     imageSrc: "/images/special-block/fifth-block/4.png",
                   } as FeatureSlide,
                   {
-                    text: "",
+                    text: "Кастомизация виджета продаж, билетов и писем под партнера",
                     imageSrc: "/images/special-block/fifth-block/5.png",
                   } as FeatureSlide,
                   {
-                    text: "",
+                    text: "Кастомизация виджета продаж, билетов и писем под партнера",
                     imageSrc: "/images/special-block/fifth-block/6.png",
                   } as FeatureSlide,
                   {
-                    text: "",
+                    text: "Кастомизация виджета продаж, билетов и писем под партнера",
                     imageSrc: "/images/special-block/fifth-block/7.png",
                   } as FeatureSlide,
                 ]}
