@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zapomni-landing-service
+  labels:
+    app: zapomni-landing
+spec:
+  selector:
+    app: zapomni-landing
+  ports:
+  - name: http
+    port: 80
+    targetPort: 3000
+    protocol: TCP
+  type: ClusterIP
