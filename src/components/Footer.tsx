@@ -6,7 +6,15 @@ import AppContainer from "@/components/AppContainer";
 
 export default function Footer() {
   return (
-    <Box component="footer" sx={{ py: 5, borderTop: "1px solid #121212" }}>
+    <Box 
+      component="footer" 
+      id="contacts"
+      sx={{ 
+        py: 5, 
+        borderTop: "1px solid #121212",
+        scrollMarginTop: 100
+      }}
+    >
       <AppContainer>
         <Box
           sx={{
